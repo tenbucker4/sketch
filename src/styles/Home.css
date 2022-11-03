@@ -30,7 +30,38 @@ main {
     font-size: 70px;
 }
 
-.main-right .hero p {
+.learn-more {
     width: 40%;
     align-self: flex-end;
+}
+
+.learn-more button {
+    border: none;
+    background-color: transparent;
+    margin-top: 1rem;
+    text-transform: uppercase;
+}
+
+.toggle-nav {
+    position: fixed;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 0 4rem rgba(0, 0, 0, 0.3);
+    background-color: var(--main-blue);
+    transition: background-color, transform;
+    transition-timing-function: ease;
+    transition-duration: 300ms;
+}
+
+.toggle-nav:hover {
+    transform: translateX(-50%) scale(1.05);
+}
+
+.toggle-nav:active {
+    transform: translateX(-50%) scale(0.95);
 }

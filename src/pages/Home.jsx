@@ -9,11 +9,15 @@ const Home = () => {
 				<div className="main-right">
 					<div className="hero">
 						<h1>We build designs for the future</h1>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, unde tempora quibusdam assumenda iure officia!</p>
+						<div className='learn-more'>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore corporis nulla, aliquam eum qui illo?</p>
+							<button>Learn More</button>
+						</div>
 					</div>
 				</div>
 			</main>
-			<nav>Nav</nav>
+			<button className='toggle-nav'></button>
+			{/* <nav>Nav</nav> */}
 		</>
         
     )
