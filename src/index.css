@@ -14,15 +14,15 @@ body {
     -moz-osx-font-smoothing: grayscale;
     width: 100vw;
     min-height: 100vh;
-    color: var(--main-grey);
+    color: var(--main-text);
 }
 
 :root {
-    --main-white: #fbfcfd;
-    --main-grey: #2e3237;
+    --main-white: #faf9f7;
+    --main-text: #023049;
     --light-grey: #dadbdc;
-    --main-red: #f32f15;
-    --main-blue: #3d34fc;
+    --accent-1: #d21700;
+    --accent-2: #366c8c;
 }
 
 button {

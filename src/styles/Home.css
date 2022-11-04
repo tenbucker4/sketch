@@ -52,10 +52,13 @@ main {
     border-radius: 50%;
     border: none;
     box-shadow: 0 0 4rem rgba(0, 0, 0, 0.3);
-    background-color: var(--main-blue);
+    background-color: var(--accent-2);
     transition: background-color, transform;
     transition-timing-function: ease;
     transition-duration: 300ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .toggle-nav:hover {
@@ -64,4 +67,45 @@ main {
 
 .toggle-nav:active {
     transform: translateX(-50%) scale(0.95);
+}
+
+.hamburger {
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+
+.hamburger-bun {
+    background-color: var(--main-white);
+    width: 30px;
+    border-radius: 1px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    transition: all 0.4s ease-in-out;
+}
+
+.top-bun {
+    top: 25%;
+}
+
+.bottom-bun {
+    top: 75%;
+}
+
+.top-bun.active,
+.bottom-bun.active {
+    width: 40px;
+    transform-origin: center;
+}
+
+.top-bun.active {
+    transform: rotate(-45deg) translateX(calc(-75% + 2px));
+    top: -5px;
+}
+
+.bottom-bun.active {
+    transform: rotate(45deg) translateX(calc(-75% + 2px));
+    top: 35px;
 }

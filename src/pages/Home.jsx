@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "../styles/Home.css"
 
 const Home = () => {
+	const [menuOpen, setMenuOpen] = useState(false);
+
     return (
 		<>
 			<main>
@@ -16,7 +18,12 @@ const Home = () => {
 					</div>
 				</div>
 			</main>
-			<button className='toggle-nav'></button>
+			<button className='toggle-nav' onClick={() => setMenuOpen(prev => !prev)}>
+				<div className='hamburger'>
+					<span className={menuOpen ? "hamburger-bun top-bun active" : "hamburger-bun top-bun"}></span>
+					<span className={menuOpen ? "hamburger-bun bottom-bun active" : "hamburger-bun bottom-bun"}></span>
+				</div>
+			</button>
 			{/* <nav>Nav</nav> */}
 		</>
         
