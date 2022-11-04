@@ -52,7 +52,6 @@ main {
     border-radius: 50%;
     border: none;
     box-shadow: 0 0 4rem rgba(0, 0, 0, 0.3);
-    background-color: var(--accent-2);
     transition: background-color, transform;
     transition-timing-function: ease;
     transition-duration: 300ms;

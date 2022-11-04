@@ -35,3 +35,11 @@ button {
 #root {
     position: relative;
 }
+
+.blue {
+    color: var(--accent-2);
+}
+
+.red {
+    color: var(--accent-1);
+}
