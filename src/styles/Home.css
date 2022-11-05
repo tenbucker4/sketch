@@ -3,6 +3,8 @@ main {
     width: 100vw;
     display: flex;
     position: relative;
+    transition: transform 0.4s ease;
+    z-index: 2;
 }
 
 .main-left,
@@ -13,6 +15,33 @@ main {
 
 .main-left {
     background-color: var(--main-white);
+    overflow: scroll;
+    display: grid;
+    grid-template-areas: "col-1 col-2";
+    grid-template-rows: 100%;
+    gap: 1rem;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.column-left {
+    grid-area: "col-0 / col-0 / col-0 / col-0";
+}
+
+.column-right {
+    grid-area: "col-1 / col-1 / col-1 / col-1";
+}
+
+.column img {
+    width: 100%;
+    height: auto;
+}
+
+.column-right img:nth-child(1) {
+    margin-top: 2rem;
 }
 
 .main-right {
@@ -23,11 +52,13 @@ main {
     padding: 24.5vh 5vw 3.75rem 4vw;
     display: flex;
     flex-direction: column;
-    gap: 12rem;
+    gap: 2rem;
 }
 
 .main-right .hero h1 {
-    font-size: 70px;
+    font-weight: 400;
+    font-size: 60px;
+    text-transform: uppercase;
 }
 
 .learn-more {
@@ -40,10 +71,43 @@ main {
     background-color: transparent;
     margin-top: 1rem;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    transition: text-indent 0.2s ease;
+    position: relative;
+}
+
+.learn-more button:hover {
+    text-indent: 1rem;
+}
+
+.learn-more button::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    background-color: var(--accent-2);
+    height: 0.75rem;
+    width: 0.75rem;
+    border-radius: 50%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.learn-more button:hover::before {
+    display: inline-block;
+}
+
+.learn-more button:hover::before {
+    text-indent: 0rem;
+    opacity: 1;
 }
 
 .toggle-nav {
     position: fixed;
+    z-index: 3;
     bottom: 3rem;
     left: 50%;
     transform: translateX(-50%);
@@ -107,4 +171,15 @@ main {
 .bottom-bun.active {
     transform: rotate(45deg) translateX(calc(-75% + 2px));
     top: 35px;
+}
+
+nav {
+    height: 50vh;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: 1;
+    overflow: hidden;
+    background-color: var(--main-text);
 }

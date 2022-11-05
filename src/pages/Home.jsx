@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import design1 from "../designs/design-1-min.jpg"
+import design2 from "../designs/design-2-min.jpg"
 import "../styles/Home.css"
 
 const Home = () => {
@@ -6,8 +8,15 @@ const Home = () => {
 
     return (
 		<>
-			<main>
-				<div className="main-left"></div>
+			<main style={{ transform: menuOpen? "translateY(-50%)" : "translateY(0)" }}>
+				<div className="main-left">
+					<div className="column column-left">
+						<img src={design1} alt="" />
+					</div>
+					<div className="column column-right">
+						<img src={design2} alt="" />
+					</div>
+				</div>
 				<div className="main-right">
 					<div className="hero">
 						<h1>We build <span className='blue'>designs</span> for the <span className='red'>future</span></h1>
@@ -24,7 +33,7 @@ const Home = () => {
 					<span className={menuOpen ? "hamburger-bun bottom-bun active" : "hamburger-bun bottom-bun"}></span>
 				</div>
 			</button>
-			{/* <nav>Nav</nav> */}
+			<nav>Nav</nav>
 		</>
         
     )
